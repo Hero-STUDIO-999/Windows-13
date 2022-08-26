@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="main.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+<link rel="stylesheet" href="script.js">
+<link rel="stylesheet" href="/feather/feather.css">
+<link rel="stylesheet" href="/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/ti-icons/css/themify-icons.css">
+<link rel="stylesheet" href="/typicons/typicons.css">
+<link rel="stylesheet" href="/simple-line-icons/css/simple-line-icons.css">
+<link rel="stylesheet" href="/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="icos.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="font.css" rel="stylesheet">
+<title>Windows 13</title>
+</head>
+<body>
+	<div id="contextMenu" class="context-menu"
+		style="display:none">
+		<ul>
+      <button onmouseenter="myFunction()" class="con"><t style="margin-left: 163px;"><a><i class="mdi mdi-eye" style="font-size: 15px; color: white; margin-left: -10px;"></i> <t style="margin-left: 7px;">View</t></a></t><i class="mdi mdi-menu-right" style="font-size: 15px; color: white; margin-left: 140px;"></i></button>   
+			<li style="border-radius: 0px;"><t style="margin-left: 22px;"><a><i class="mdi mdi-sort" style="font-size: 15px; color: white;"></i> <t style="margin-left: 7px;">Sort by</t></a></t><i class="mdi mdi-menu-right" style="font-size: 15px; color: white; margin-left: 118px;"></i></li>
+			<li style="cursor: progress; border-radius: 0px;"><a style="margin-left: 20px; cursor: progress;"><i class="mdi mdi-refresh"></i> <t style="margin-left: 7px;">Refresh</t></a></li>
+      <center><button style="height: 2px; width: 235px; border: none; background-color: rgba(51, 51, 51, 0.1); border-radius: 10px;"></button></center>
+			<li style="border-radius: 0px;"><a style="margin-left: 23px;"><i class="mdi mdi-plus-circle-outline" style="font-size: 15px; color: white;"></i> <t style="margin-left: 7px;">New</t></a></li>
+
+			<li style="border-radius: 0px;"><a style="margin-left: 23px;"><i class="mdi mdi-launch" style="font-size: 15px; color: white;"></i> <t style="margin-left: 7px;">Open in terminal</t></a></li>
+			<li style="border-radius: 0px;"><t style="margin-left: 23px;"><a><i class="mdi mdi-more" style="font-size: 15px; color: white;"></i> <t style="margin-left: 7px;">More options</t></a></t></li>
+      <br>
+		</ul>
+    <div class="dropdown">
+        <div id="myDropdown" class="dropdown-content">
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-television" style="font-size: 20px; font-weight: bolder; color: rgb(94, 124, 255); margin-left: -20px;"></i><t style="margin-left: 20px;">Large icons</t></a>
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-laptop" style="font-size: 20px; font-weight: bolder; color: rgb(94, 124, 255); margin-left: -20px;"></i><t style="margin-left: 20px;">Medium icons</t></a>
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-crop-landscape" style="font-size: 20px; font-weight: bolder; color: rgb(94, 124, 255); margin-left: -20px;"></i><t style="margin-left: 20px;">Small icons</t></a>
+          <center><button style="height: 2px; width: 200px; border: none; background-color: rgba(51, 51, 51, 0.1); border-radius: 10px;"></button></center>
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-flash" style="font-size: 20px; font-weight: bolder; color: rgb(0, 60, 255); margin-left: -20px;"></i><t style="margin-left: 20px;">Auto arrange icons</t></a>
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-view-grid" style="font-size: 20px; font-weight: bolder; color: rgb(0, 47, 255); margin-left: -20px;"></i><t style="margin-left: 20px;">Align icons to grid</t></a>
+          <a><t style="margin-left: 30px;"><i class="mdi mdi-eye" style="font-size: 20px; font-weight: bolder; color: rgb(0, 0, 0); margin-left: -20px;"></i><t style="margin-left: 20px;">Show desktop icons</t></a>
+          <br>
+        </div>
+       
+  </div>
+	</div>
+
+	<script>
+    function myFun() {
+  document.getElementById("myDrop").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.drop')) {
+    var dropdowns = document.getElementsByClassName("drop-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+		document.onclick = hideMenu;
+		document.oncontextmenu = rightClick;
+
+		function hideMenu() {
+			document.getElementById(
+				"contextMenu").style.display = "none"
+		}
+
+		function rightClick(e) {
+			e.preventDefault();
+
+			if (document.getElementById(
+				"contextMenu").style.display == "block")
+				hideMenu();
+			else {
+				var menu = document
+					.getElementById("contextMenu")
+					
+				menu.style.display = 'block';
+        menu.style.cursor = 'progress';
+        menu.style.transitionDuration = '0.3s';
+				menu.style.left = e.pageX + "px";
+				menu.style.top = e.pageY + "px";
+			}
+		}
+	</script>
+    <!-- barra di navigazion in basso -->
+ <center>
+<center>
+    <nav>
+       
+          <div id="nav-container">
+            <div id="first-container">
+              <!-- windows 11 logo -->
+              <div id="windows-div" title="start">
+                <img src="home.png" alt="">
+              </div>
+              <!-- search icon -->
+              <div id="search-div" title="Search"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path>
+                </svg></div>
+              <!-- windows 11 widget -->
+              <div id="widget-div" title="widget"><img src="widget.png" alt=""></div>
+              <!-- windows 11 widget ends -->
+              <div id="widget-div" class="app-icon" title="File browser"><img src="explorer.png" alt=""></div>
+              <div id="widget-div" class="app-icon" title="Settings"><img src="settings.ico" alt=""></div>
+            </div>
+            
+            <div id="second-container">
+              <div id="sistema-info">
+                <!-- wifi -->
+                <div title="Connected, Secured">
+                  <img src="/wifi.png" alt="">
+                </div>
+                <!-- vulume -->
+                <div title="Audio"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-xmark" class="svg-inline--fa fa-volume-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M301.2 34.85c-11.5-5.188-25.02-3.122-34.44 5.253L131.8 160H48c-26.51 0-48 21.49-48 47.1v95.1c0 26.51 21.49 47.1 48 47.1h83.84l134.9 119.9c5.984 5.312 13.58 8.094 21.26 8.094c4.438 0 8.972-.9375 13.17-2.844c11.5-5.156 18.82-16.56 18.82-29.16V64C319.1 51.41 312.7 40 301.2 34.85zM513.9 255.1l47.03-47.03c9.375-9.375 9.375-24.56 0-33.94s-24.56-9.375-33.94 0L480 222.1L432.1 175c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l47.03 47.03l-47.03 47.03c-9.375 9.375-9.375 24.56 0 33.94c9.373 9.373 24.56 9.381 33.94 0L480 289.9l47.03 47.03c9.373 9.373 24.56 9.381 33.94 0c9.375-9.375 9.375-24.56 0-33.94L513.9 255.1z"></path>
+                  </svg></div>
+                <!-- battery -->
+                <div title="20% remaining"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="battery-quarter" class="svg-inline--fa fa-battery-quarter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M192 192H96v128h96V192zM544 192V160c0-35.35-28.65-64-64-64H64C28.65 96 0 124.7 0 160v192c0 35.35 28.65 64 64 64h416c35.35 0 64-28.65 64-64v-32c17.67 0 32-14.33 32-32V224C576 206.3 561.7 192 544 192zM480 352H64V160h416V352z"></path>
+                  </svg></div>
+              </div>
+              </div>
+              <div id="second">
+              <div id="sistema-data">
+                <div id="orario-data">12:00</div>
+                <div id="calendario-data" title="dataCalendario">30/12/2021</div>
+        </div>
+       </div>
+           
+          
+      </nav>
+</center>
+    <!-- start section, che si apre con il buttone windows tramite javascript -->
+    <section id="w11-start-section" class="">
+      <div class="input-div-start"><input type="text" id="cerca-input-start" placeholder="Type to search"></div>
+      <div class="padding-start">
+        <div id="apps-container">
+          <div class="app-container-header">
+            <span>Pinned Apps</span>
+            <div>
+              <span>All apps</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="second-app-container">
+            <!-- 1 LINEA ORRIZONTALE -->
+            <div class="app-icon"><img src="edge-icon.png" alt="edge icon">
+              <span>Edge</span>
+            </div>
+          
+            <div class="app-icon"><img src="settings.ico"><span>Settings</span></div>
+            <div class="app-icon"><img src="/ms-skype.ico"><span>Skype</span></div>
+            <div class="app-icon"><img src="vs-code.ico"><span>VS code</span></div>
+            <div class="app-icon"><img src="vs-code.ico"><span>Visual Studio</span></div>
+            <div class="app-icon"><img src="/explorer.png" style="height: 40px; border-radius: 3px;"><span>File Explorer</span></div>
+          </div>
+        </div>
+        <!-- la parte dove ci sono le CARTELLE -->
+        <div id="article-div">
+          <div class="app-container-header">
+            <span>Recommended</span>
+            <div>
+              <span>More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="article-container">
+            <!-- 1 LINEA ORIZZONTALE -->
+            <div>
+              <div><img src="/folder.png" style="border-radius: 5px;" alt="folder microsoft"></div>
+              <div>
+                <div>God of War 2</div>
+                <div>Downloads</div>
+              </div>
+            </div>
+            <div>
+              <div><img src="/folder.png" alt="folder microsoft"></div>
+              <div>
+                <div>Program Files</div>
+                <div>C:\</div>
+              </div>
+            </div>
+            <!-- 2 LINEA ORIZZONTALE -->
+            <div>
+              <div><img src="/folder.png" alt="folder microsoft"></div>
+              <div>
+                <div>Windows 13</div>
+                <div>Documents</div>
+              </div>
+            </div>
+            <div>
+              <div><img src="/folder.png" alt="folder microsoft"></div>
+              <div>
+                <div>Chrome</div>
+                <div>Downloads</div>
+              </div>
+            </div>
+            <!-- 3 LINEA ORIZZONTALE -->
+            <div>
+              <div><img src="folder.png" alt="folder microsoft"></div>
+              <div>
+                <div>VScode</div>
+                <div>Documents</div>
+              </div>
+            </div>
+            <div>
+              <div><img src="/folder.png" alt="folder microsoft"></div>
+              <div>
+                <div>Pes 2022</div>
+                <div>C:\</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- la parte più in basso della START section (buttone spegni e nome utente) -->
+      <div id="footer-start-section">
+        <div class="nome-utente-start-section">
+          <!-- icona UTENTE -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+            <path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path>
+          </svg>
+          <span>Admin</span>
+        </div>
+        <div class="spegni-pc-start-section">
+          <!-- icona SPEGNI -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+            <path d="M12 21c4.411 0 8-3.589 8-8 0-3.35-2.072-6.221-5-7.411v2.223A6 6 0 0 1 18 13c0 3.309-2.691 6-6 6s-6-2.691-6-6a5.999 5.999 0 0 1 3-5.188V5.589C6.072 6.779 4 9.65 4 13c0 4.411 3.589 8 8 8z"></path>
+            <path d="M11 2h2v10h-2z"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- windows 11 Search content -->
+      <div id="search-content" class="">
+      <div class="boxes">
+      Quick searches
+      <br>
+      <br>
+      <button class="sbtn">Sound settings</button><br>
+      <button class="fbtn">Focus settings</button>  
+<t><button class="dbtn">Display settings</button></t>
+      </div>
+      </div>
+    </section>
+    <section id="widget-section" class="">
+      <div style="grid-area: meteo;" id="meteo-widget">
+        <div class="widget-header-card">
+          <span>METEO</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
+            <path fill="currentColor" d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path>
+          </svg>
+        </div>
+        <div class="content-widget">
+          <div class="sole-meteo"></div>
+          <div class="temperatura-container">
+            <span>20</span>
+            <span>°C</span>
+          </div>
+        </div>
+        <a class="btn-meteo-widget" href="https://weather.com/it-IT/tempo/oggi/l/62aee98dba8cc9c051a3753c27e85efd93f931abdd92a0010ab567ecfeb93d64" target="_blank">più dettagli</a>
+      </div>
+      <div style="grid-area: calendario;">
+        <div class="widget-header-card">
+          <span>Calendario</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
+            <path fill="currentColor" d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path>
+          </svg>
+        </div>
+        <div class="coming-soon-widget">coming soon...</div>
+      </div>
+      <div style="grid-area: galleria;">
+        <div class="widget-header-card">
+          <span>Galleria</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
+            <path fill="currentColor" d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path>
+          </svg>
+        </div>
+        <div class="coming-soon-widget">coming soon...</div>
+      </div>
+      <div style="grid-area: video;">
+        <div class="widget-header-card">
+          <span>Video</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
+            <path fill="currentColor" d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path>
+          </svg>
+        </div>
+        <div class="coming-soon-widget">coming soon...</div>
+      </div>
+      <div style="grid-area: todo;">
+        <div class="widget-header-card">
+          <span>Todo</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
+            <path fill="currentColor" d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"></path>
+          </svg>
+        </div>
+        <div class="coming-soon-widget">coming soon...</div>
+      </div>
+    </section>
+    <section id="notification-section">
+      <div class="dropdown2">
+        <t class="this">
+        <button class="htn" id="btne"><img src="wifi.png" width="41"></button>
+        <button onmouseenter="myFunction()" class="dropbtn"><img src="arrow.png" width="34.3"></button>
+        </t>
+        <br>
+        <br>
+        <img src="audio3.png" width="20" style="margin-left: -30px; margin-top: 110px;" alt="">
+        <input type="range" style="width: 220px; transition: 0.3s ease;" name="" id="">
+        <div id="myDropdown2" class="dropdown2-content">
+          <a href="#about"><img src="wifi.png" width="20" alt=""><t style="margin-left: 15px;">Direct_328l86_Hotspot</t></a>
+          <a href="#about"><i class="fas fa-wifi"></i><t style="margin-left: 10px;">Spectranet_5G_LTE Un..</t></a>
+          <t style="color: black;">Connected, Secured</t>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </section>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown2-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+      
+    <div class="extra">
+      <section id="spegni-section" class="">
+      <button class="btn-sign">Sign in</button>
+        <div>
+      
+        </div>
+      </section>
+      <div class="windows-tab">
+        <div class="tab-content">
+          <div class="topnavbar-tab">
+            <div class="nome-tab">coming soon...</div>
+            <div class="top-left-menu-tab">
+              <!-- meno -->
+              <div>
+                <svg id="min-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path>
+                </svg>
+              </div>
+              <!-- quadrato -->
+              <div>
+                <svg id="max-icon" aria-hidden="true" focusable="false" data-prefix="far" data-icon="square" class="svg-inline--fa fa-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M384 31.1H64c-35.35 0-64 28.65-64 63.1v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64v-320C448 60.65 419.3 31.1 384 31.1zM400 416c0 8.822-7.178 16-16 16H64c-8.822 0-16-7.178-16-16V96c0-8.822 7.178-16 16-16h320c8.822 0 16 7.178 16 16V416z"></path>
+                </svg>
+              </div>
+              <!-- per -->
+              <div>
+                <svg id="close-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="coming-soon-tab">
+            <span class="coming-soon-span">
+              coming soon...
+            </span>
+            <img id="tab-image" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- SelectionDrag Div con Javascript -->
+    <div id="div"></div>
+  <style>
+ 
+  </style>
+  <script>
+  let startContainer = document.querySelector("#w11-start-section");
+  let startBtn = document.querySelector("#windows-div");
+  
+  let widgetContainer = document.querySelector("#widget-section");
+  let widgetBtn = document.querySelector("#widget-div");
+  
+  let spegniContainer = document.querySelector("#spegni-section");
+  let spegniBtn = document.querySelector(".spegni-pc-start-section");
+  
+  let paddingContainer = document.querySelector(".padding-start");
+  let searchBtn = document.querySelector("#search-div");
+  
+  let searchContainer = document.querySelector("#search-content");
+  let footerStartContainer = document.querySelector("#footer-start-section");
+  
+  let windowsTab = document.querySelector(".windows-tab");
+  
+  let topPartTab = document.querySelector(".topnavbar-tab");
+  
+  let closeBtn = document.querySelector("#close-icon");
+  let MaxBtn = document.querySelector("#max-icon");
+  let minBtn = document.querySelector("#min-icon");
+  
+  let heightTab = document.querySelector(".coming-soon-tab");
+  
+  let appIcon = document.querySelectorAll(".app-icon");
+  let nomeTab = document.querySelector(".nome-tab");
+  let tabImage = document.querySelector("#tab-image");
+  let spanComingSoon = document.querySelector(".coming-soon-span");
+  
+  let nav = document.querySelector("nav");
+  let iconNav = document.querySelector("#first-container");
+  
+  let notifBtns = document.querySelector("#second-container");
+  let notifContainer = document.querySelector("#notification-section");
+  
+  var vh = window.innerHeight / 100;
+  var vw = window.innerWidth / 100;
+  
+  let isTopBarClicked = false;
+  
+  let div = document.querySelector("#div");
+  
+  let firstPositionX;
+  let firstPositionY;
+  
+  let lastPositionX;
+  let lastPositionY;
+  
+  // from bottom to top WINDOWS START animation
+  startBtn.addEventListener("click", function () {
+    searchContainer.style.display = "none";
+    paddingContainer.style.display = "grid";
+    footerStartContainer.style.display = "flex";
+    openOneWinCloseOther();
+  });
+  
+  // from bottom to top WINDOWS START animation
+  widgetBtn.addEventListener("click", function () {
+    if (startContainer.classList.contains("on-visible-start")) {
+      startContainer.classList.toggle("on-visible-start");
+      widgetContainer.classList.toggle("on-visible-widget");
+    } else {
+      widgetContainer.classList.toggle("on-visible-widget");
+    }
+  });
+  
+  // turn off computer
+  spegniBtn.addEventListener("click", function () {
+    spegniContainer.classList.toggle("pc-off");
+
+  });
+  
+  spegniContainer.addEventListener("click", function () {
+    spegniContainer.classList.toggle("pc-off");
+  });
+  
+  // SEARCH function in beta
+  searchBtn.addEventListener("click", function () {
+    paddingContainer.style.display = "none";
+    footerStartContainer.style.display = "none";
+    searchContainer.style.display = "grid";
+    openOneWinCloseOther();
+  });
+  
+  // windows moving tab
+  topPartTab.addEventListener("mousedown", function () {
+    isTopBarClicked = true;
+    console.log("mousedown");
+    document.onmousemove = function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      var MaxWidth = document.documentElement.scrollWidth;
+      var MaxX = MaxWidth - windowsTab.offsetWidth;
+  
+      if (x <= 0) {
+        leftTab();
+      } else if (y <= 0) {
+        topTab();
+      } else if (x >= MaxX) {
+        rightTab();
+      } else {
+        windowsTab.style.transitionDuration = "0s";
+        windowsTab.style.left = x + "px";
+        windowsTab.style.top = y + "px";
+        if (windowsTab.offsetHeight > 90 * vh) {
+          windowsTab.style.height = "70vh";
+        }
+        windowsTab.style.removeProperty("transform");
+      }
+    };
+  });
+  
+  // non mouve più la tab, quando non è necessario
+  document.addEventListener("mouseup", function () {
+    document.onmousemove = null;
+  });
+  
+  for (let i = 0; i < appIcon.length; i++) {
+    spanComingSoon.style.display = "grid";
+    tabImage.style.display = "none";
+    appIcon[i].addEventListener("click", function () {
+      windowsTab.style.display = "grid";
+      spanComingSoon.style.display = "none";
+      tabImage.style.display = "grid";
+      let appName = appIcon[i].querySelector("span").textContent;
+      nomeTab.textContent = appName;
+      /* get the image from the app icon */
+      let appImage = appIcon[i].querySelector("img").src;
+      tabImage.src = appImage;
+    });
+  }
+  
+  // buttone per cancellare la tab (nascondere la tab)
+  closeBtn.addEventListener("click", function () {
+    windowsTab.style.display = "none";
+  });
+  
+  // crea un icona nella nav, e nasconde la tab
+  minBtn.addEventListener("click", function () {
+    windowsTab.style.display = "none";
+    /*add element div with img to iconNav*/
+    let newDivNav = document.createElement("div");
+    let newImageIconNav = document.createElement("img");
+    newImageIconNav.src = tabImage.src;
+    newDivNav.appendChild(newImageIconNav);
+    iconNav.appendChild(newDivNav);
+    console.log("MINIMIZED TAB");
+  });
+  
+  // ingrandisce la tab a seconda delle dimensioni dello schermo
+  MaxBtn.addEventListener("click", function () {
+    topTab();
+  });
+  
+  // per aprire le notifiche
+  notifBtns.addEventListener("click", function () {
+    notifContainer.classList.toggle("notification-on");
+  });
+  
+  function leftTab() {
+    windowsTab.style.left = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("right");
+    windowsTab.style.removeProperty("transform");
+    windowsTab.style.width = "50vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
+    console.log("LEFT TAB");
+  }
+  
+  function topTab() {
+    windowsTab.style.left = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("right");
+    windowsTab.style.removeProperty("transform");
+    windowsTab.style.width = "100vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
+    console.log("TOP TAB");
+  }
+  
+  function rightTab() {
+    windowsTab.style.transform = "translateX(99%)";
+    windowsTab.style.left = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("right");
+    windowsTab.style.width = "50vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
+    console.log("RIGHT TAB");
+  }
+  
+  // funzione per aprire una finestra e chiuderne l'altra (se c'è)
+  function openOneWinCloseOther() {
+    if (widgetContainer.classList.contains("on-visible-widget")) {
+      widgetContainer.classList.toggle("on-visible-widget");
+      startContainer.classList.toggle("on-visible-start");
+    } else {
+      startContainer.classList.toggle("on-visible-start");
+    }
+  }
+  
+  // crea un selezionatore provissorio a seconda della tua posizione del mouse
+  function dragSelectorLogic() {
+    // tutta la funzione inizia dopo il mouse è cliccato
+    document.addEventListener("mousedown", function (e1) {
+      if (windowsTab.style.display == "grid") {
+        // se la tab è visibile, allora la funzione NON è attiva
+      } else {
+        // se START è visibile, allora si chiude in automatico
+        if (
+          e1.target.closest("#w11-start-section") != startContainer &&
+          startContainer.classList.contains("on-visible-start") &&
+          e1.target.closest("nav") != nav
+        ) {
+          startContainer.classList.remove("on-visible-start");
+          dragSelectorCode();
+        } // se WIDGET è visibile, allora si chiude in automatico
+        else if (
+          e1.target.closest("#widget-section") != widgetContainer &&
+          widgetContainer.classList.contains("on-visible-widget") &&
+          e1.target.closest("nav") != nav
+        ) {
+          widgetContainer.classList.remove("on-visible-widget");
+          dragSelectorCode();
+        } // se NOTIFICHE è visibile, allora si chiude in automatico
+        else if (
+          e1.target.closest("#notification-section") != notifContainer &&
+          notifContainer.classList.contains("notification-on") &&
+          e1.target.closest("nav") != nav
+        ) {
+          notifContainer.classList.remove("notification-on");
+          dragSelectorCode();
+        } // se si usa il Drag dentro START, WIDGET o NOTIFICHE, allora la funzione NON è attiva.
+        else if (
+          e1.target.closest("#w11-start-section") == startContainer ||
+          e1.target.closest("#notification-section") == notifContainer ||
+          e1.target.closest("#widget-section") == widgetContainer
+        ) {
+          console.log("You can't drag the tab here!");
+        } // altrimenti, la funzione è attiva
+        else {
+          dragSelectorCode();
+        }
+      }
+  
+      function dragSelectorCode() {
+        // preseting del selezionatore
+        div.style.display = "block";
+  
+        div.style.width = 0 + "px";
+        div.style.height = 0 + "px";
+  
+        firstPositionX = e1.clientX;
+        firstPositionY = e1.clientY;
+  
+        div.style.top = firstPositionY + "px";
+        div.style.left = firstPositionX + "px";
+  
+        div.style.transition = "none";
+  
+        document.addEventListener("mousemove", function (e2) {
+          lastPositionX = e2.clientX;
+          lastPositionY = e2.clientY;
+  
+          // se la posizione X del mouse è cambiata, allora si aggiorna la posizione del selezionatore
+          // ingrandisce il selezionatore
+          if (firstPositionX - lastPositionX < 0) {
+            div.style.width = Math.round(lastPositionX - firstPositionX) + "px";
+          } // sposta il selezionatore, ma visivamente lo ingrandisce a sinistra (è un trick interressante)
+          else {
+            div.style.width = Math.round(firstPositionX - lastPositionX) + "px";
+            div.style.left = lastPositionX + "px";
+          }
+  
+          // se la posizione Y del mouse è cambiata, allora si aggiorna la posizione del selezionatore
+          // ingrandisce il selezionatore
+          if (firstPositionY - lastPositionY < 0) {
+            div.style.height = Math.round(lastPositionY - firstPositionY) + "px";
+          } // sposta il selezionatore, ma visivamente lo ingrandisce in alto (è un trick interressante)
+          else {
+            div.style.height = Math.round(firstPositionY - lastPositionY) + "px";
+            div.style.top = lastPositionY + "px";
+          }
+        });
+  
+        // una volta che non si clicca più, si chiude il selezionatore
+        // resettando prima con un'animazione
+        // poi togliendo il selezionatore (che è un div invisibile)
+        document.addEventListener("mouseup", function () {
+          div.style.width = "0px";
+          div.style.height = "0px";
+          div.style.transition = "all 0.3s";
+  
+          // aspetta che prima finisca l'animazione poi rimuove il selezionatore
+          setTimeout(function () {
+            div.style.display = "none";
+          }, 300);
+        });
+      }
+    });
+  }
+  
+  // ottenere l'ora corrente
+  function getDate() {
+    let DataAttuale = new Date();
+  
+    let giorno = DataAttuale.getDate();
+    let mese = DataAttuale.getMonth() + 1; // mese parte da 0
+    let anno = DataAttuale.getFullYear();
+  
+    let ora = DataAttuale.getHours();
+    let minuti = DataAttuale.getMinutes();
+  
+    let orarioContainer = document.getElementById("orario-data");
+    let calendarioContainer = document.getElementById("calendario-data");
+  
+    // se l'ora/minuti è meno di 10, allora si aggiunge uno 0 prima
+    if (ora < 10 && minuti < 10) {
+      orarioContainer.innerHTML = "0" + ora + ":" + "0" + minuti;
+    } else if (ora < 10) {
+      orarioContainer.innerHTML = "0" + ora + ":" + minuti;
+    } else if (minuti < 10) {
+      orarioContainer.innerHTML = ora + ":" + "0" + minuti;
+    } else {
+      orarioContainer.innerHTML = ora + ":" + minuti;
+    }
+  
+    // se il giorno/mese è meno di 10, allora si aggiunge uno 0 prima
+    if (giorno < 10 && mese < 10) {
+      calendarioContainer.innerHTML =
+        "0" + giorno + "/" + "0" + mese + "/" + anno;
+    } else if (giorno < 10) {
+      calendarioContainer.innerHTML = "0" + giorno + "/" + mese + "/" + anno;
+    } else if (mese < 10) {
+      calendarioContainer.innerHTML = giorno + "/" + "0" + mese + "/" + anno;
+    } else {
+      calendarioContainer.innerHTML = giorno + "/" + mese + "/" + anno;
+    }
+  
+    document.getElementById("sistema-data").title =
+      orarioContainer.innerHTML + "  " + calendarioContainer.innerHTML;
+  
+    // ogni minuto si aggiunge l'ora
+    // 1000 = 1 secondo... 1000 * 60 = 60000... 60000 = 1 minuto
+    setTimeout(function () {
+      getDate();
+    }, 60000); // 60 secondi
+  }
+  
+  // le funzione chiamate sono inizializzate in queste funzioni
+  dragSelectorLogic();
+  getDate();
+  
+  function DispositivoNonSupportato() {
+    let AttualeWidthContainer = document.getElementById("width-attuale");
+    let AttualeHeightContainer = document.getElementById("height-attuale");
+  
+    let widthSpiegazione = document.getElementById("width-spiegazione");
+    let heightSpiegazione = document.getElementById("height-spiegazione");
+  
+    checkSopporto();
+  
+    window.addEventListener("resize", function () {
+      checkSopporto();
+    });
+  
+    function checkSopporto() {
+      // se la larghezza è inferiore a 800px, allora si mostra la spiegazione
+      if (window.innerWidth < 800) {
+        widthSpiegazione.innerHTML =
+          "ERRORE LARGHEZZA: ti serve <b>800px</b>" +
+          "   " +
+          "per visualizzare questa pagina";
+        AttualeWidthContainer.innerHTML = window.innerWidth + "px";
+        widthSpiegazione.style.color = "rgb(255, 0, 47)";
+      } else {
+        widthSpiegazione.innerHTML = "Larghezza del tuo Schermo Giusta!";
+        AttualeWidthContainer.innerHTML = "";
+        widthSpiegazione.style.color = "rgb(0, 255, 157)";
+      }
+  
+      // se l'altezza è inferiore a 600px, allora si mostra la spiegazione
+      if (window.innerHeight < 600) {
+        heightSpiegazione.innerHTML =
+          "ERRORE ALTEZZA: ti serve <b>600px</b>" +
+          "   " +
+          "per visualizzare questa pagina";
+        AttualeHeightContainer.innerHTML = window.innerHeight + "px";
+        heightSpiegazione.style.color = "rgb(255, 0, 47)";
+      } else {
+        heightSpiegazione.innerHTML = "Altezza del tuo Schermo Giusta!";
+        AttualeHeightContainer.innerHTML = "";
+        heightSpiegazione.style.color = "rgb(0, 255, 157)";
+      }
+    }
+  }
+  
+  DispositivoNonSupportato();
+  
+  </script>
+
+ </center>
+</body>
+</html>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown2-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+  
+      <script src="index.js"></script>
+    </body>
+  </html>
+  <script>
+  const btn = document.getElementById('btne');
+  
+  let index = 0;
+  
+  const colors = ['rgb(0, 90, 193)', 'rgba(0, 17, 255, 0.1)', 'rgb(0, 90, 193)', 'rgba(0, 17, 255, 0.1)'];
+  
+  btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = colors[index];
+    btn.style.marginLeft = '-140px';
+    btn.style.width = '55px'; 
+    btn.style.height = '44px';
+    btn.style.borderBlockWidth = '0px';
+    btn.style.border = '2px solid var(--glass-white-color)';
+    btn.style.transition = '0.3s ease';
+    btn.style.borderTopLeftRadius = '5px';
+    btn.style.borderBottomLeftRadius = '5px';
+    index = index >= colors.length - 1 ? 0 : index + 1;
+  });
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+  <div class="w">
+      <div
+      class="grid grid-rows-2 gap-y-2 text-white font-semibold ml-2 mt-4 select-none"
+    >
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="pc.ico" style="width: 50px;" alt="" />
+        <p class="text-[0.8rem] text-center">This PC</p>
+      </div>
+      <div
+      class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+    >
+      <img class="" src="/Trash.png" alt="" />
+      <p class="text-[0.8rem] text-center">Recycle Bin</p>
+    </div>
+    <div
+    class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+  >
+    <img class="" src="desktop.png" alt="" />
+    <p class="text-[0.8rem] text-center">Desktop</p>
+  </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="Onedrive.png" alt="" />
+        <p class="text-[0.8rem] text-center">One Drive</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="store.png" width="50" alt="" />
+        <p class="text-[0.8rem] text-center">Store</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/ScreenSaver.png" alt="" />
+        <p class="text-[0.8rem] text-center">Screen Saver</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/Onedrive.png" alt="" />
+        <p class="text-[0.8rem] text-center">One Drive</p>
+      </div>
+      
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/Contacts.png" alt="" />
+        <p class="text-[0.8rem] text-center">Contacts</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/desktop.png" alt="" />
+        <p class="text-[0.8rem] text-center">Desktop</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/Music.png" alt="" />
+        <p class="text-[0.8rem] text-center">Music</p>
+      </div>
+      <div
+        class="w-24 rounded flex flex-col items-center hover:bg-white-transparent duration-300 p-1"
+      >
+        <img class="" src="./assets/Desktop/Videos.png" alt="" />
+        <p class="text-[0.8rem] text-center">Videos</p>
+      </div>
+    </div>
+  </div>

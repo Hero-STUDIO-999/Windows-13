@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Javascript Change Div Background Image</title>
+
+    <style type="text/css">
+
+    #div1 {
+    width:100%;
+    height:100%;
+    background-image:url(/2.png);
+background-position: center;
+background-size: cover
+    }
+
+    p {
+    font-family:Verdana;
+    font-weight:bold;
+    font-size:11px
+    }
+
+    </style>
+
+    <script language="javascript" type="text/javascript">
+    function changeDivImage()
+    {
+        var imgPath = new String();
+        imgPath = document.getElementById("div1").style.backgroundImage;
+
+        if(imgPath == "url(images/blue.gif)" || imgPath == "")
+        {
+            document.getElementById("div1").style.backgroundImage = "url(3.png)";
+        }
+        else
+        {
+            document.getElementById("div1").style.backgroundImage = "url(4.png)";
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <center>
+    <p>
+        This Javascript Example will change the background image of<br />
+        HTML Div Tag onclick event.
+    </p>
+    <div id="div1">
+    </div>
+    <br />
+    <input type="button" value="Change Background Image" onclick="changeDivImage()" />
+    </center>
+
+</body>
+</html>
